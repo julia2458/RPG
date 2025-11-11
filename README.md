@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🏕️ Acampamento Mistério: Verão Encantado
 
 RPG de texto desenvolvido em Java para o trabalho de Orientação a Objetos.
@@ -190,3 +191,6 @@ Desenvolvido por: [Seu Nome Aqui]
 - Artefatos reagem automaticamente ao entrar em novos locais
 - Decisões afetam o `contextoJogo` (níveis de magia, perigo, etc.)
 - Sistema de quantidade evita duplicatas no inventário
+=======
+# RPG
+>>>>>>> b374689880643a393aba1881decc26b35e9d624f
