@@ -41,9 +41,9 @@ public class Main {
         System.out.println("================================================================");
         System.out.println("\nBem-vindo ao Acampamento Misterio!");
         System.out.println("Um lugar magico onde aventuras e enigmas aguardam...");
-        System.out.println("\nUma forÃ§a misteriosa estÃ¡ desequilibrando a harmonia do acampamento.");
-        System.out.println("VocÃª e suas amigas devem explorar locais mÃ¡gicos, enfrentar criaturas");
-        System.out.println("sombrias e descobrir os segredos que mantÃªm este lugar em equilÃ­brio.\n");
+        System.out.println("\nUma forca misteriosa esta desequilibrando a harmonia do acampamento.");
+        System.out.println("Voce e suas amigas devem explorar locais magicos, enfrentar criaturas");
+        System.out.println("sombrias e descobrir os segredos que mantem este lugar em equilibrio.\n");
         pausar();
     }
     private static void selecionarPersonagem() throws Exception {

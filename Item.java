@@ -18,25 +18,25 @@ public class Item implements Cloneable, Comparable<Item>
     public void setNome (String nome) throws Exception
     {
         if (nome == null || nome.trim().isEmpty())
-            throw new Exception ("O nome do item nÃ£o pode ser vazio.");
+            throw new Exception ("O nome do item nao pode ser vazio.");
         this.nome = nome;
     }
     public void setDescricao (String descricao) throws Exception
     {
         if (descricao == null || descricao.trim().isEmpty())
-            throw new Exception ("A descriÃ§Ã£o do item nÃ£o pode ser vazia.");
+            throw new Exception ("A descricao do item nao pode ser vazia.");
         this.descricao = descricao;
     }
     public void setEfeito (String efeito) throws Exception
     {
         if (efeito == null || efeito.trim().isEmpty())
-            throw new Exception ("O efeito do item nÃ£o pode ser vazio.");
+            throw new Exception ("O efeito do item nao pode ser vazio.");
         this.efeito = efeito;
     }
     public void setQuantidade (byte quantidade) throws Exception
     {
         if (quantidade < 0)
-            throw new Exception ("Quantidade invÃ¡lida.");
+            throw new Exception ("Quantidade invalida.");
         this.quantidade = quantidade;
     }
     public boolean verificarItem ()
@@ -54,17 +54,17 @@ public class Item implements Cloneable, Comparable<Item>
     public void usarItem ()
     {
         if (!verificarItem()){
-            System.out.println("VocÃª nÃ£o possui mais o item " + nome + ".");
+            System.out.println("Voce nao possui mais o item " + nome + ".");
             return;
         }
         this.quantidade--;
-        System.out.println("VocÃª usou o item: " + nome + ". Agora Restam " + quantidade + " unidades.");
+        System.out.println("Voce usou o item: " + nome + ". Agora Restam " + quantidade + " unidades.");
     }
     @Override
     public String toString()
     {
         return "Nome: " + this.nome + "\n" +
-                "DescriÃ§Ã£o: " + this.descricao + "\n" +
+                "Descricaoo: " + this.descricao + "\n" +
                 "Efeito: " + this.efeito + "\n" +
                 "Quantidade: " + (this.quantidade);
     }

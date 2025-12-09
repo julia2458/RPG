@@ -1,4 +1,5 @@
 import java.util.*;
+
 class ContextoJogo 
 {
     boolean magiaProxima; 
@@ -7,23 +8,27 @@ class ContextoJogo
     int nivelDesequilibrioEmocional;
     int protecao;
     String simboloDesenhado;
+    
     @Override
     public String toString()
     {
         return "--- Visualizar Magias --- " +
-               "\n MÃ¡gia Proxima: "+magiaProxima+
+               "\n Magia Proxima: "+magiaProxima+
                "\n Mensagens Invisiveis: "+mensagensInvisiveis+
-               "\n Nivel de Perigo MÃ¡gico: "+nivelPerigoMagico+
+               "\n Nivel de Perigo Magico: "+nivelPerigoMagico+
                "\n Nivel de Desequilibrio Emocional do grupo: "+nivelDesequilibrioEmocional+
                "\n Simbolo: "+simboloDesenhado+
-               "\n Turnos de proteÃ§Ã£o: "+protecao;
+               "\n Turnos de protecao: "+protecao;
     }
+    
     @Override
     public boolean equals(Object obj)
     {
         if (obj == this) return true;
         if (obj == null || obj.getClass() != this.getClass()) return false;
+        
         ContextoJogo c = (ContextoJogo) obj;
+        
         return magiaProxima == c.magiaProxima
             && mensagensInvisiveis == c.mensagensInvisiveis
             && nivelPerigoMagico == c.nivelPerigoMagico
@@ -31,52 +36,66 @@ class ContextoJogo
             && protecao == c.protecao
             && Objects.equals(simboloDesenhado, c.simboloDesenhado);
     }
+    
     @Override
     public int hashCode()
     {
         return Objects.hash(magiaProxima, mensagensInvisiveis, nivelPerigoMagico, nivelDesequilibrioEmocional, protecao, simboloDesenhado);
     }
 }
+
 public abstract class Artefato extends Item
 {
     private boolean ativo;
+    
     protected Artefato (String nome, String descricao, String efeito) throws Exception
     {
         super(nome, descricao, efeito, (byte)1);
         this.ativo = false;
     }
+    
     public boolean estaAtivo()
     {
         return ativo;
     }
+    
     public final void ativarArtefato(ContextoJogo contex) throws Exception
     {
         if(contex==null)
             throw new Exception ("Contexto nulo.");
+        
         if(!estaAtivo())
             ativo = true;
+        
         ligarAtivar(contex);
+        
     }
+    
     @Override
     public void adicionarQuantidade(byte valor) throws Exception
     {
         if (valor <= 0) return;
-        throw new Exception("Artefatos nÃ£o podem ter mÃºltiplas unidades empilhadas.");
+        throw new Exception("Artefatos não podem ter multiplas unidades empilhadas.");
     }
+    
     public void desativarArtefato()
     {
         this.ativo = false;
     }
+    
     protected abstract void ligarAtivar(ContextoJogo contex) throws Exception; 
 }
+
 class ColarDaVo extends Artefato {
     public ColarDaVo() throws Exception 
     {
-        super("Colar da AvÃ³", "Brilha quando a magia estÃ¡ prÃ³xima.", "Detector de magia");
+        super("Colar da Avo", "Brilha quando a magia esta proxima.", "Detector de magia");
     }
+    
     public ColarDaVo(ColarDaVo outro) throws Exception {
         super(outro.getNome(), outro.getDescricao(), outro.getEfeito());
     }
+    
     @Override
     public ColarDaVo clone() {
         try {
@@ -85,6 +104,7 @@ class ColarDaVo extends Artefato {
             return null;
         }
     }
+
     @Override
     protected void ligarAtivar(ContextoJogo contex) 
     {
@@ -95,17 +115,21 @@ class ColarDaVo extends Artefato {
         }
     }
 }
+    
 class CadernoDeDesenhos extends Artefato 
 {
    private static final Set<String> SIMBOLOS_VALIDOS =
-    new HashSet<>(Arrays.asList("Lua", "Estrela", "ConstelaÃ§Ã£o", "Riacho"));
+    new HashSet<>(Arrays.asList("Lua", "Estrela", "Constelacao", "Riacho"));
+    
     public CadernoDeDesenhos() throws Exception 
     {
-        super("Caderno de Desenhos", "Revela pistas quando sÃ­mbolos corretos sÃ£o desenhados.", "RevelaÃ§Ã£o de pistas");
+        super("Caderno de Desenhos", "Revela pistas quando símbolos corretos são desenhados.", "Revelação de pistas");
     }
+    
     public CadernoDeDesenhos(CadernoDeDesenhos outro) throws Exception {
         super(outro.getNome(), outro.getDescricao(), outro.getEfeito());
     }
+    
     @Override
     public CadernoDeDesenhos clone() {
         try {
@@ -114,15 +138,20 @@ class CadernoDeDesenhos extends Artefato
             return null;
         }
     }
+    
+    
     @Override
     protected void ligarAtivar(ContextoJogo contex) 
     {
         if (contex.simboloDesenhado == null || contex.simboloDesenhado.trim().isEmpty()) 
         {
-            System.out.println("O caderno estÃ¡ em brancoâ€¦ Tente desenhar um sÃ­mbolo.");
+            System.out.println("O caderno esta em branco… Tente desenhar um simbolo.");
             return;
         }
+    
+    
         String simb = contex.simboloDesenhado.trim();
+        
         if (SIMBOLOS_VALIDOS.contains(simb)) 
         {
             System.out.println("[MAGIC] O caderno reage ao simbolo '"+simb+"' e revela uma pista escondida no papel!");
@@ -133,15 +162,19 @@ class CadernoDeDesenhos extends Artefato
         }
     }
 }
+    
+    
 class LupaMagica extends Artefato 
 {
     public LupaMagica() throws Exception
     {
-        super("Lupa MÃ¡gica", "Revela mensagens invisÃ­veis.", "RevelaÃ§Ã£o de mensagens ocultas");
+        super("Lupa Magica", "Revela mensagens invisiveis.", "Revelacao de mensagens ocultas");
     }
+    
     public LupaMagica(LupaMagica outro) throws Exception {
         super(outro.getNome(), outro.getDescricao(), outro.getEfeito());
     }
+    
     @Override
     public LupaMagica clone() {
         try {
@@ -150,6 +183,8 @@ class LupaMagica extends Artefato
             return null;
         }
     }
+    
+    
     @Override
     protected void ligarAtivar(ContextoJogo contex) 
     {
@@ -162,15 +197,19 @@ class LupaMagica extends Artefato
         }
     }
 }
+    
+    
 class BraceleteDeFolhas extends Artefato 
 {
     public BraceleteDeFolhas() throws Exception 
     {
-        super("Bracelete de Folhas", "Detecta emoÃ§Ãµes e desequilÃ­brios naturais.", "Empatia ambiental");
+        super("Bracelete de Folhas", "Detecta emoções e desequilíbrios naturais.", "Empatia ambiental");
     }
+    
     public BraceleteDeFolhas(BraceleteDeFolhas outro) throws Exception {
         super(outro.getNome(), outro.getDescricao(), outro.getEfeito());
     }
+    
     @Override
     public BraceleteDeFolhas clone() {
         try {
@@ -179,9 +218,12 @@ class BraceleteDeFolhas extends Artefato
             return null;
         }
     }
+    
+    
     @Override
     protected void ligarAtivar(ContextoJogo contex) {
         int n = Math.max(0, Math.min(100, contex.nivelDesequilibrioEmocional));
+        
         if (n == 0)     
         {
             System.out.println("[MAGIC] O Bracelete esta sereno - o ambiente esta em harmonia.");
@@ -194,15 +236,18 @@ class BraceleteDeFolhas extends Artefato
         }
     }
 }
+
 class PulseiraDaSorte extends Artefato 
 {
     public PulseiraDaSorte() throws Exception 
     {
-        super("Pulseira da Sorte", "Protege temporariamente de perigos mÃ¡gicos.", "ProteÃ§Ã£o temporÃ¡ria");
+        super("Pulseira da Sorte", "Protege temporariamente de perigos magicos.", "Protecao temporaria");
     }
+    
     public PulseiraDaSorte(PulseiraDaSorte outro) throws Exception {
         super(outro.getNome(), outro.getDescricao(), outro.getEfeito());
     }
+    
     @Override
     public PulseiraDaSorte clone() {
         try {
@@ -211,6 +256,7 @@ class PulseiraDaSorte extends Artefato
             return null;
         }
     }
+
     @Override
     protected void ligarAtivar(ContextoJogo contex) 
     {

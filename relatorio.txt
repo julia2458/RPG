@@ -1,0 +1,13 @@
+﻿RELATÓRIO DE DESENVOLVIMENTO
+Aluna: Júlia Damária Lupi - RA: 24002058
+Descrição das Atividades:
+Foram desenvolvidas as classes que compõem a estrutura principal do jogo, como Mapa.java, Personagem.java, Item.java e suas respectivas subclasses. Além dessas, também foi implementada a classe Inventário.java, que não possui relação de herança, mas desempenha papel essencial na gestão dos itens do jogo.
+Paralelamente, foram criados arquivos de teste para cada classe, permitindo a validação individual e contínua das funcionalidades, assegurando que cada componente se comportasse conforme o esperado e contribuísse de forma consistente para o funcionamento geral do sistema.
+Auto-Avaliação:
+Atuação de forma proativa no desenvolvimento do jogo RPG, contribuindo para a implementação das classes Mapa, Personagem, Item e Inventário, além de suas subclasses. Realizei testes individuais para validar as funcionalidades e garantir o bom funcionamento do sistema. Mantive o código organizado e busquei soluções eficientes, demonstrando comprometimento e evolução na aplicação dos conceitos de programação orientada a objetos.
+Aluna: Maysa Gabrielle Rodrigues de Melo - RA: 24009119
+Descrição das Atividades:
+Foram desenvolvidas as classes que compõem o jogo e suas respectivas subclasses, como Niveis.java. Além disso, foram implementadas as classes responsáveis por estruturar e conectar o funcionamento geral do sistema, como Jogo.java e Main.java.
+Paralelamente, foram criados arquivos de teste para validar individualmente as funcionalidades de cada classe, garantindo a coerência e o bom desempenho do código durante o desenvolvimento.
+Auto-Avaliação:
+Durante o desenvolvimento do projeto, mantive uma postura comprometida e organizada, aplicando os conceitos de programação orientada a objetos na estruturação das classes e funcionalidades. Contribuí para a coerência e o bom funcionamento do sistema, aprimorando minhas habilidades técnicas e analíticas. O projeto representou uma oportunidade significativa de aperfeiçoamento profissional e acadêmico.
