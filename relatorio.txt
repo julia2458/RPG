@@ -1,13 +1,35 @@
 ﻿RELATÓRIO DE DESENVOLVIMENTO
+
+
+Aluna: Isabelly Horschutz - RA: 24008480
+
+Descrição das Atividades:
+Ingressei no projeto a partir da segunda fase de desenvolvimento, quando a base lógica do sistema já havia sido estruturada e as principais classes de domínio estavam em funcionamento. Nesse estágio, meu papel foi voltado principalmente para a integração da interface gráfica (GUI) ao jogo.
+Também fui responsável por conectar os eventos da interface com as ações previstas no sistema, garantindo que operações como navegação entre telas, seleção de elementos, exibição de informações e acionamento de funcionalidades ocorressem de forma clara e responsiva.
+Além disso, contribuí para organizar a estrutura da GUI, deixando-a mais funcional e alinhada ao comportamento esperado do jogo. 
+
+Auto-Avaliação:
+Ao ingressar no projeto na segunda fase de desenvolvimento, consegui compreender rapidamente a estrutura já existente e contribuir de forma consistente para sua evolução. Fui responsável principalmente pela integração da interface gráfica (GUI), conectando os componentes visuais às funcionalidades do sistema. Avalio que desempenhei essa atividade com comprometimento, organização e cuidado, buscando sempre manter o código claro e funcional. Sinto que evoluí tecnicamente durante o processo e que minha participação agregou valor ao resultado final do projeto.
+
+
 Aluna: Júlia Damária Lupi - RA: 24002058
+
 Descrição das Atividades:
-Foram desenvolvidas as classes que compõem a estrutura principal do jogo, como Mapa.java, Personagem.java, Item.java e suas respectivas subclasses. Além dessas, também foi implementada a classe Inventário.java, que não possui relação de herança, mas desempenha papel essencial na gestão dos itens do jogo.
-Paralelamente, foram criados arquivos de teste para cada classe, permitindo a validação individual e contínua das funcionalidades, assegurando que cada componente se comportasse conforme o esperado e contribuísse de forma consistente para o funcionamento geral do sistema.
+No desenvolvimento do projeto, implementei as classes que compõem a estrutura principal do jogo, incluindo Mapa.java, Personagem.java, Item.java e suas subclasses, responsáveis por modelar os elementos fundamentais da lógica interna. Também desenvolvi a classe Inventário.java, que, embora não faça parte de uma hierarquia de herança, tem papel essencial na administração dos itens do jogador durante a partida.
+Além das classes de lógica, criei arquivos de teste específicos para cada componente, permitindo validar continuamente o comportamento das funcionalidades e garantir que cada classe atendesse corretamente aos requisitos estabelecidos para o sistema.
+Além disso, auxiliei no desenvolvimento das classes de interface gráfica (GUI) e de seus componentes visuais. Nesse processo, contribuí com a criação e organização de janelas, painéis, botões, barras de progresso e outros elementos que compõem a interação com o usuário. Além disso, colaborei na integração entre a GUI e a lógica do jogo, ajudando a garantir que funcionalidades como navegação, seleção de personagens, combate e gerenciamento do inventário fossem corretamente refletidas na interface. Esse suporte contribuiu para a construção de uma experiência visual consistente com a mecânica do jogo e alinhada ao fluxo de gameplay definido pelo projeto.
+
 Auto-Avaliação:
-Atuação de forma proativa no desenvolvimento do jogo RPG, contribuindo para a implementação das classes Mapa, Personagem, Item e Inventário, além de suas subclasses. Realizei testes individuais para validar as funcionalidades e garantir o bom funcionamento do sistema. Mantive o código organizado e busquei soluções eficientes, demonstrando comprometimento e evolução na aplicação dos conceitos de programação orientada a objetos.
+Atuei de forma proativa no desenvolvimento do jogo RPG, contribuindo para a implementação das classes Mapa, Personagem, Item, Inventário e suas respectivas subclasses. Realizei testes individuais para validar as funcionalidades, assegurando que cada componente operasse conforme o esperado e colaborando para a estabilidade geral do sistema. Mantive o código organizado, adotei boas práticas de desenvolvimento e busquei soluções eficientes para os desafios encontrados. Além disso, demonstrei comprometimento e evolução contínua na aplicação dos conceitos de programação orientada a objetos ao longo do projeto.
+
+
 Aluna: Maysa Gabrielle Rodrigues de Melo - RA: 24009119
+
 Descrição das Atividades:
-Foram desenvolvidas as classes que compõem o jogo e suas respectivas subclasses, como Niveis.java. Além disso, foram implementadas as classes responsáveis por estruturar e conectar o funcionamento geral do sistema, como Jogo.java e Main.java.
+Foram desenvolvidas as classes que compõem o jogo e suas respectivas subclasses, como Niveis.java. Além disso, foram implementadas as classes responsáveis por estruturar e organizar o funcionamento geral do sistema, como Jogo.java e Main.java.
 Paralelamente, foram criados arquivos de teste para validar individualmente as funcionalidades de cada classe, garantindo a coerência e o bom desempenho do código durante o desenvolvimento.
+Além da camada lógica, também foi desenvolvido o conjunto de interfaces gráficas (GUI) do projeto. Esse trabalho envolveu a criação de janelas, painéis, botões, campos de texto, áreas de exibição e outros componentes visuais que compõem a apresentação do jogo ao usuário. As telas foram estruturadas para permitir a navegação entre diferentes partes do jogo, a visualização de informações importantes e a interação direta com os elementos do sistema, contribuindo para uma experiência mais completa e visualmente organizada.
+
 Auto-Avaliação:
-Durante o desenvolvimento do projeto, mantive uma postura comprometida e organizada, aplicando os conceitos de programação orientada a objetos na estruturação das classes e funcionalidades. Contribuí para a coerência e o bom funcionamento do sistema, aprimorando minhas habilidades técnicas e analíticas. O projeto representou uma oportunidade significativa de aperfeiçoamento profissional e acadêmico.
+Durante o desenvolvimento do projeto, considero que tive uma atuação consistente e comprometida com cada etapa do processo. Contribuí diretamente para a implementação das principais classes do jogo, bem como de suas subclasses, aplicando de forma correta os conceitos de programação orientada a objetos. Dediquei atenção especial à criação dos testes individuais, o que me permitiu identificar e corrigir falhas rapidamente, garantindo a estabilidade e o bom funcionamento do sistema.
+Ao longo do projeto, mantive uma postura proativa na busca por soluções, procurei manter o código limpo e organizado e evoluí significativamente em minha capacidade de analisar problemas, estruturar soluções e aplicar boas práticas de desenvolvimento. Avalio que meu desempenho foi positivo e que consegui contribuir de maneira relevante para a qualidade final do projeto.
